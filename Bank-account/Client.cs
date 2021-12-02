@@ -20,21 +20,21 @@ namespace Bank_account
 
         public void Crediter(Compte compte, double montant) {
             Operation op = new Operation(DateTime.Now, "Dépot", montant, "Validé");
-            compte.SetSolde(compte.Getsolde()+ montant);
+            compte.solde= compte.solde + montant;
 
             operation.Add(op);
 
         }
         public void Debiter (Compte compte, double montant) {
             string statut;
-            if ((compte.Getsolde() - montant) < 0)
+            if ((compte.solde - montant) < 0)
             {
                 
                 statut = "Echec, Votre solde est insiffusant";
             }
             else
             {
-                compte.SetSolde( compte.Getsolde() - montant);
+                compte.solde = compte.solde - montant;
                 statut = "Validé";
             }
             Operation op = new Operation(DateTime.Now, "Retrait", montant, statut);

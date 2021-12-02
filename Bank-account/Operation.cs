@@ -6,13 +6,13 @@ namespace Bank_account
     {
 
 
-        public DateTime date;
+        public DateTime date { get; set; }
 
-        public string operation;
+        public string operation { get; set; }
 
-        public double montant;
+        public double montant { get; set; }
 
-        public string statut;
+        public string statut { get; set; }
 
 
         public Operation(DateTime date, string operation, double montant, string statut)
