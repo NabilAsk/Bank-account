@@ -21,7 +21,6 @@ namespace Bank_account
         public void Crediter(Compte compte, double montant) {
             Operation op = new Operation(DateTime.Now, "Dépot", montant, "Validé");
             compte.solde= compte.solde + montant;
-
             operation.Add(op);
 
         }
